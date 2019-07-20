@@ -1,0 +1,1 @@
+docker run --rm -v C:/dev/docker/curso-docker-aws/app/:/app -v C:/dev/docker/curso-docker-aws/.m2/:/root/.m2/ -w /app maven:3.6.1-jdk-11-slim mvn clean package -Dmaven.test.skip=true

@@ -1,0 +1,30 @@
+docker run --rm -v C:/dev/docker/curso-docker-aws/app/:/app -v C:/dev/docker/curso-docker-aws/.m2/:/root/.m2/ -w /app maven:3-alpine mvn clean
+docker run --rm -v C:/dev/docker/curso-docker-aws/app/:/app -v C:/dev/docker/curso-docker-aws/.m2/:/root/.m2/ -w /app maven:3.6.1-jdk-11-slim mvn clean
+
+docker run --rm -it openjdk:11-jdk-slim bash
+
+
+http://localhost:8080/swagger-ui.html#/
+
+
+/auth/signin
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountCredentialsVO>
+	<password>123456</password>
+	<username>teddy</username>
+</AccountCredentialsVO>
+
+api/book/v1/1
+
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWRkeSIsInJvbGVzIjpbIkFETUlOIiwiTUFOQUdFUiJdLCJpYXQiOjE1NjM2NTc4MDIsImV4cCI6MTU2MzY2MTQwMn0.Y5wh62_grnbAXMfSBMOxtYsTS5VS_v50oJGLMf7AV6Q
+
+
+mysql --user=root --password docker_to_aws_with_java
+
+
+docker tag docker-to-aws-with-java:latest tmbfilho/docker-to-aws-with-java:latest
+
+docker login docker.io
+
+docker push tmbfilho/docker-to-aws-with-java
