@@ -28,3 +28,56 @@ docker tag docker-to-aws-with-java:latest tmbfilho/docker-to-aws-with-java:lates
 docker login docker.io
 
 docker push tmbfilho/docker-to-aws-with-java
+
+-----
+
+instalação amazon
+
+sudo yum update
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker $USER
+sudo groupadd docker
+docker run hello-world
+
+docker pull tmbfilho/docker-to-aws-with-java
+
+docker run -d -p80:8080 tmbfilho/docker-to-aws-with-java
+
+---
+rds
+docker
+docker123
+
+--------------
+
+conectar banco rds
+
+mysql -u docker -h dockertoawswithjava.cbepwaxxurtc.us-east-1.rds.amazonaws.com -password
+use docker_to_aws_with_java;
+select * from users;
+------
+subir docker image para ecr
+
+=>faz login
+$(aws ecr get-login --no-include-email --region us-east-1)
+
+=>passa tag
+docker tag docker-to-aws-with-java:latest 898051455760.dkr.ecr.us-east-1.amazonaws.com/docker-to-aws-with-java:latest
+
+=>faz push da imagem
+docker push 898051455760.dkr.ecr.us-east-1.amazonaws.com/docker-to-aws-with-java:latest
+
+----
+ec2
+rds
+ecr
+ecs
+
+
+898051455760.dkr.ecr.us-east-1.amazonaws.com/docker-to-aws-with-java:latest
+
+
+
+
